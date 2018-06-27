@@ -1,4 +1,82 @@
+$font-stack: "Exo 2", sans-serif;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  color: red;
-  font-size: 90px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-family: $font-stack;
+  background-image: url(/img/bg-pattern.png);
+  background-repeat: repeat-x repeat-y;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    background-image: url(/img/bg-pattern@2x.png);
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  color: #000000;
+  position: relative;
+  height: 480px - 16px * 2;
+  width: 320px - 48px * 2;
+  z-index: 1;
+  background-image: url(/img/back.svg);
+  text-align: left;
+  padding: 16px 48px;
+  &:hover {
+    background: url(/img/hover.svg) bottom center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 472px;
+    width: 312px;
+    background: url(/img/bg.svg) bottom center;
+    z-index: -2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 472px;
+    width: 312px;
+    background: url(/img/cat.png) bottom center;
+    z-index: -1;
+  }
+
+  p {
+    color: #666666;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+
+  span {
+    font-size: 48px;
+  }
 }

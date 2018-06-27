@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
 /***/ "./src/scss/style.scss":
 /*!*****************************!*\
   !*** ./src/scss/style.scss ***!
@@ -104,7 +116,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module './src/js/index.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! ./src/js/index.js */"./src/js/index.js");
 module.exports = __webpack_require__(/*! ./src/scss/style.scss */"./src/scss/style.scss");
 
 
