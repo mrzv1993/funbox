@@ -9,3 +9,13 @@ body,
   justify-content: center;
   align-items: center;
 }
+
+.blackButton {
+  background: linear-gradient(to bottom right, transparent 24px, #1698d9 24px);
+  color: white;
+}
+
+.whiteButton {
+  background: linear-gradient(to bottom right, transparent 24px, #eab05a 24px);
+  color: black;
+}

@@ -1,72 +1,44 @@
 import React from "react";
 import styled from "styled-components";
 
+import Card from "./Card";
+
 const Main = styled.section`
   padding: 40px;
+  text-align: center;
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: left;
 `;
 
-const Border = styled.div`
-  height: 480px;
-  width: 320px;
-  position: relative;
-  border-radius: 8px;
-  background: linear-gradient(to bottom right, transparent 25px, #1698d9 25px);
-  cursor: pointer;
-  margin-right: 24px;
-  margin-top: 24px;
-
-  &:hover {
-    background: linear-gradient(
-      to bottom right,
-      transparent 25px,
-      #eab05a 25px
-    );
+const content = [
+  {
+    taste: "c фуа-гра",
+    bonus: "10 порций, мышь в подарок"
+  },
+  {
+    taste: "с рыбой",
+    bonus: "40 порций, 2 мыши в подарок"
+  },
+  {
+    taste: "с курой",
+    bonus: "100 порций, 5 мышей в подарок заказчик доволен"
   }
-`;
+];
 
-const Card = styled.div`
-  background: linear-gradient(to bottom right, transparent 25px, #f2f2f2 25px);
-  height: 472px;
-  width: 312px;
-  color: #000000;
-  border-radius: 6px;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-`;
-
-const Content = styled.p`
-  display: block;
-  margin-left: 40px;
-`;
-
-const App = () => (
-  <Main>
-    <h1>Ты сегодня покормил кота?</h1>
-    <Cards>
-      <Border>
-        <Card>
-          <Content>saasdsadd</Content>
-        </Card>
-      </Border>
-      <Border>
-        <Card>
-          <Content>saasdsadd</Content>
-        </Card>
-      </Border>
-      <Border>
-        <Card>
-          <Content>saasdsadd</Content>
-        </Card>
-      </Border>
-    </Cards>
-  </Main>
-);
-
-export default App;
+export default () => {
+  return (
+    <Main>
+      <h1>Ты сегодня покормил кота?</h1>
+      <Cards>
+        <Card card={content[0]} />
+        <Card card={content[1]} />
+        <Card card={content[2]} />
+      </Cards>
+    </Main>
+  );
+};
